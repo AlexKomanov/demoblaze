@@ -1,0 +1,32 @@
+{
+  "name": "demoblaze",
+  "version": "1.0.0",
+  "description": "Puppeteer project with Cucumber.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexKomanov/demoblaze.git"
+  },
+  "keywords": [
+    "Puppeteer",
+    "Cucumber"
+  ],
+  "author": "Alex Komanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexKomanov/demoblaze/issues"
+  },
+  "homepage": "https://github.com/AlexKomanov/demoblaze#readme",
+  "dependencies": {
+    "@supercharge/strings": "^1.18.0",
+    "chai": "^4.3.0",
+    "cucumber-html-reporter": "^5.3.0",
+    "puppeteer": "^7.1.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0"
+  }
+}
