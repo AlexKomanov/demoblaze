@@ -4,7 +4,7 @@ const upperNavigationBar = {
     'About us': '.navbar-nav.ml-auto [data-target="#videoModal"]',
     'Cart': '#cartur',
     'Log in': '#login2',
-    'Sign Up': '#signin2',
+    'Sign up': '#signin2',
 
 };
 
