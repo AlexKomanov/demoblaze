@@ -29,7 +29,6 @@ When(
 
 When('I submit by clicking the login button', async function () {
 	await utils.clickByXpath(this.page, loginWindow.buttons.login);
-    await this.page.waitForTimeout(5000);
 });
 
 Then('I validate that navigation bar contains message {string}', async function(expectedMessage){
