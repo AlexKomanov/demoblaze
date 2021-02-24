@@ -1,8 +1,8 @@
-Feature: Feature name
+Feature: SignUp Feature 
 
     Feature Description
 
-    Scenario: Scenario name
+    Scenario: Sign Up with a new user
 
     Given I open a main page
     When I clicked a "Sign up" button on the Main Page
