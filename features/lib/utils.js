@@ -37,17 +37,6 @@ module.exports = {
         } catch (error) {}
       },
 
-      checkAndAcceptAlertMessage: async function(page, expectedMessage){
-        //await page.waitForTimeout(1000);
-        page.on('dialog', async dialog => {
-          let alertMessage = await dialog.message();
-          await dialog.accept();
-          console.log(alertMessage);
-          expect(alertMessage).to.contain(expectedMessage);
-      });
-      
-      },
-
       pressKey: async function (page, key) {
         try {
           await page.keyboard.press(key, { delay: 100});
@@ -63,6 +52,19 @@ module.exports = {
           return await page.$eval(selector, (element) => element.textContent);
         } catch (error) {
           throw new Error(`Could not get text from selector: ${selector}`);
+        }
+      },
+
+      clickByText: async function (page, selector) {
+        try {
+          const [objectToClick] = await page.$x(
+            `//*[contains(text(), '${selector}')]`
+          );
+          if (objectToClick) {
+            await objectToClick.click();
+          }
+        } catch (error) {
+          throw new Error(`Could not click on selector: ${selector}`);
         }
       },
 
