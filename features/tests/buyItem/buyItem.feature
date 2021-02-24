@@ -1,7 +1,7 @@
 Feature: Buy Item Feature 
 
     Feature Description
-@focus 
+
     Scenario: Buy Item
 
     Given I open a main page
@@ -9,6 +9,7 @@ Feature: Buy Item Feature
     When I click on the "Samsung galaxy s6" item
     And I validate that a page title is "Samsung galaxy s6"
     And I click the 'Add to cart' button
+    And I print a message to the console
     And I validate that alert message contains "Product added" and submit
     And I clicked a "Cart" button on the Main Page
     And I click the 'Place Order' button
