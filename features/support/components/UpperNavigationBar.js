@@ -5,6 +5,7 @@ const upperNavigationBar = {
     'Cart': '#cartur',
     'Log in': '#login2',
     'Sign up': '#signin2',
+    'Name Of User': '#nameofuser'
 
 };
 
