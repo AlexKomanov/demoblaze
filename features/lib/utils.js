@@ -38,9 +38,9 @@ module.exports = {
       },
 
       checkAndAcceptAlertMessage: async function(page, expectedMessage){
+        //await page.waitForTimeout(1000);
         page.on('dialog', async dialog => {
           let alertMessage = await dialog.message();
-          await page.waitForTimeout(500);
           await dialog.accept();
           console.log(alertMessage);
           expect(alertMessage).to.contain(expectedMessage);
@@ -53,6 +53,16 @@ module.exports = {
           await page.keyboard.press(key, { delay: 100});
         } catch (error) {
           throw new Error(`Couldn't press key ${key} on the keyboard`);
+        }
+      },
+
+      getText: async function (page, selector) {
+        try {
+          await page.waitForTimeout(2000);
+          await page.waitForSelector(selector);
+          return await page.$eval(selector, (element) => element.textContent);
+        } catch (error) {
+          throw new Error(`Could not get text from selector: ${selector}`);
         }
       },
 
