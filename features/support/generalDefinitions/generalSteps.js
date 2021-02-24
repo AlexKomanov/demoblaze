@@ -9,6 +9,6 @@ Given('I open a main page', async function () {
 When(
 	'I clicked a {string} button on the Main Page',
 	async function (buttonName) {
-		utils.click(this.page, upperNavigationBar[buttonName]);
+		await utils.click(this.page, upperNavigationBar[buttonName]);
 	}
 );
