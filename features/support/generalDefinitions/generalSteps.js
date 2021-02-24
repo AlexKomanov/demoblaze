@@ -12,8 +12,13 @@ Given('I open a main page', async function () {
 	});
 	await this.page.goto('https://www.demoblaze.com/index.html');
 	
-	
 });
+
+Then("I validate redirection to the main page", async function(){
+	let mainUrl = await this.page.url();
+	expect(mainUrl).to.contain("index.html")
+	console.log(mainUrl);
+})
 
 When(
 	'I clicked a {string} button on the Main Page',
